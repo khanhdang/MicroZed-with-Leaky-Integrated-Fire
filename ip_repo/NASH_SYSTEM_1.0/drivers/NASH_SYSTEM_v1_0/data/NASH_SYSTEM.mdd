@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER NASH_SYSTEM
+	OPTION supported_peripherals = (NASH_SYSTEM);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = NASH_SYSTEM;
+END DRIVER
