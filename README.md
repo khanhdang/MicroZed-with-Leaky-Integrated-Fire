@@ -12,6 +12,8 @@ This project is designed for Vivado 2016.4 and MicroZed 7Z010
 3. Check the file `vivado.log` to ensure the correct project.
 4. Open the Project `MicroZed_NASH_SYSTEM/MicroZed_NASH_SYSTEM.xpr`
 5. Generate bitstream and export SDK
-6. Test C code is in the driver folder `NASH_SYSTEM_LIF_neuron_test.c`
+6. Test C code is in  `src/NASH_SYSTEM_LIF_neuron_test.c`
 
 
+# Outputs
+![Image of UART](screenshot.png)
