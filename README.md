@@ -1,5 +1,6 @@
 # MicroZed-with-Leaky-Integrated-Fire
-A demo of Leaky Integrated and Fire neuron on FPGA (MicroZed)
+A demo of Leaky Integrated and Fire neuron on FPGA (MicroZed).
+The verilog code of LIF core can be read here: [NASH.v](./ip_repo/NASH_SYSTEM_1.0/src/NASH.v)
 
 # Requirements
 This project is designed for Vivado 2016.4 and MicroZed 7Z010
