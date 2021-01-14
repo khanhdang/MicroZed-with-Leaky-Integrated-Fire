@@ -8,6 +8,7 @@ module NASH (
 
 localparam THRESHOLD = 31'd200;
 localparam V_RESET = 31'd0;
+localparam LEAK = 31'd10;
 
 reg [30:0] reg_V;
 reg [7:0] wspike_cnt;
@@ -23,8 +24,11 @@ always @(posedge clk) begin
       if (wspike_cnt != control[15:8])    // different spikes
         reg_V <=  reg_V + wspike;
       wspike_cnt <= control[15:8];
-    end else if (reg_V > THRESHOLD && control[2] == 1'b1)  begin
-      reg_V <= V_RESET;
+    end else if (control[2] == 1'b1)  begin
+      if (reg_V > THRESHOLD )
+        reg_V <= V_RESET;
+      else
+        reg_V <= reg_V - LEAK;
     end
   end
 end
