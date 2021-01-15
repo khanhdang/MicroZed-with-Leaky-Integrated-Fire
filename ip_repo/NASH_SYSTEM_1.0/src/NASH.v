@@ -25,10 +25,10 @@ always @(posedge clk) begin
         reg_V <=  reg_V + wspike;
       wspike_cnt <= control[15:8];
     end else if (control[2] == 1'b1)  begin
-      if (reg_V > THRESHOLD )
+      if (reg_V >= THRESHOLD )
         reg_V <= V_RESET;
-      else
-        reg_V <= reg_V - LEAK;
+//      else
+//        reg_V <= reg_V - LEAK;
     end
   end
 end
